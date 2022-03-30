@@ -1012,9 +1012,9 @@
       "__uuid__": "d89b0a5d-a11e-48f1-a89b-1435e4700951",
       "__expectedType__": "cc.Prefab"
     },
-    "maxCoin": 5,
-    "minDuration": 0.8,
-    "maxDuration": 2.2,
+    "maxCoin": 10,
+    "minDuration": 1.2,
+    "maxDuration": 2,
     "_id": "02DUuYPrdI/bPCpn3jJSNy"
   },
   {

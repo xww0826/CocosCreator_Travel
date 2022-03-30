@@ -1,5 +1,6 @@
 
 import { Component, instantiate, Node, NodePool, Prefab, tween, UITransform, Vec3, _decorator } from 'cc';
+import TraceTailAnimation from './TraceTailAnimation';
 const { ccclass, property } = _decorator;
 
 /**
@@ -18,16 +19,18 @@ export class GoldMoving_001 extends Component {
     maxCoin: Number = 5;
 
     @property(Number)
-    minDuration: Number = 0.8;
+    minDuration: number = 2.5;
 
     @property(Number)
-    maxDuration: Number = 2.2;
+    maxDuration: number = 3.0;
 
     private scale: number;
 
     private goldPool: NodePool = new NodePool();
 
     start() {
+
+        window["test"] = this;
         // for (let index = 0; index < this.maxCoin; index++) {
         //     let gold = instantiate(this.goldPrefab);
         //     gold.parent = this.node;
@@ -60,18 +63,25 @@ export class GoldMoving_001 extends Component {
     }
 
     public addGold() {
-        for (let index = 0; index < this.maxCoin; index++) {
-            // let gold = this.goldPool.get();
-            // if (!gold) {
-            let gold = instantiate(this.goldPrefab);
-            gold.parent = this.node;
-            // this.goldPool.put(gold);
-            // }
+        // for (let index = 0; index < this.maxCoin; index++) {
+        //     // let gold = this.goldPool.get();
+        //     // if (!gold) {
+        //     let gold = instantiate(this.goldPrefab);
+        //     gold.parent = this.node;
+        //     gold.worldPosition = new Vec3(100,100);
+        //     // this.goldPool.put(gold);
+        //     // }
 
-            tween(gold)
-                .to(this.random(this.minDuration, this.maxDuration), { worldPosition: this.target.worldPosition })
-                .start();
-        }
+        //     let duration = this.random(this.minDuration, this.maxDuration);
+
+        //     console.log("====duration==>" + duration);
+        //     tween(gold)
+        //         .to(duration, { worldPosition: this.target.worldPosition }, { easing: "elasticInOut" })
+        //         .start();
+        // }
+
+        TraceTailAnimation.playAnim(TraceTailAnimation.Type.gold, this.goldPrefab, this.node, 8,
+            new Vec3(100, 100), this.target.worldPosition);
 
         // let gold = instantiate(this.goldPrefab);
         // gold.parent = this.node;
@@ -82,8 +92,8 @@ export class GoldMoving_001 extends Component {
         //     .start();
     }
 
-    private random(min, max) {
-        return Math.floor((Math.random() * (max - min)) + min);
+    public random(min, max) {
+        return (Math.random() * (max - min)) + min;
     }
 
 
