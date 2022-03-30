@@ -7,8 +7,8 @@ const { ccclass, property } = _decorator;
 /**
  * 正常加载与分帧加载列表优化案例
  */
-@ccclass('_Generator_Demo')
-export class _Generator_Demo extends Component {
+@ccclass('Generator_Demo_01')
+export class Generator_Demo_01 extends Component {
 
     @property
     itemCount = 500;

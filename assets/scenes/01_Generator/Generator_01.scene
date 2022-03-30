@@ -10,7 +10,7 @@
   },
   {
     "__type__": "cc.Scene",
-    "_name": "Main",
+    "_name": "Generator_01",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -582,7 +582,7 @@
       "__id__": 5
     },
     "component": "",
-    "_componentId": "46e43hAtONGeqeoMzMVmIVe",
+    "_componentId": "fc4ebP/5s9O24dOK+YtaHkN",
     "handler": "normalLoad",
     "customEventData": ""
   },
@@ -878,7 +878,7 @@
       "__id__": 5
     },
     "component": "",
-    "_componentId": "46e43hAtONGeqeoMzMVmIVe",
+    "_componentId": "fc4ebP/5s9O24dOK+YtaHkN",
     "handler": "generatorLoad",
     "customEventData": ""
   },
@@ -1544,7 +1544,7 @@
     "_id": "31XxMM7lpGJKYetHd3Ji4a"
   },
   {
-    "__type__": "46e43hAtONGeqeoMzMVmIVe",
+    "__type__": "fc4ebP/5s9O24dOK+YtaHkN",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -1560,7 +1560,7 @@
     "content": {
       "__id__": 30
     },
-    "_id": "b0T6gziUdC8ZJZb/HSE8Lk"
+    "_id": "37dtN3RwJKkITCOUxzLIYN"
   },
   {
     "__type__": "cc.UITransform",
