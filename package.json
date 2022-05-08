@@ -1,8 +1,8 @@
 {
+  "creator": {
+    "version": "3.5.0"
+  },
   "name": "CocosCreator_Travel",
   "uuid": "efe48db7-02ec-4451-a39c-85fb0a1269f4",
-  "version": "3.4.2",
-  "creator": {
-    "version": "3.4.2"
-  }
+  "version": "3.5.0"
 }
