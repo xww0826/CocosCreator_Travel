@@ -10,7 +10,9 @@
   "_techIdx": "0",
   "_defines": [
     {
-      "USE_TEXTURE": true
+      "USE_TEXTURE": true,
+      "USE_VERTICAL": true,
+      "USE_HORIZONTAL": true
     }
   ],
   "_states": [
