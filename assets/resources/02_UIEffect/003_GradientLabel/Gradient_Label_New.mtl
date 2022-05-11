@@ -4,7 +4,7 @@
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
-    "__uuid__": "586f006a-d54a-4abf-8cae-0c6c3be242a2",
+    "__uuid__": "56d6df57-1f4d-469b-941f-b8585713c174",
     "__expectedType__": "cc.EffectAsset"
   },
   "_techIdx": "0",
@@ -27,7 +27,9 @@
   ],
   "_props": [
     {
-      "section": 1,
+      "angle": 0,
+      "offset": 0,
+      "uvRatio": 1,
       "startColor": {
         "__type__": "cc.Color",
         "r": 255,

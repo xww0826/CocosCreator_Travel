@@ -16,7 +16,9 @@ CCEffect %{
         cullMode: none
       properties:
         alphaThreshold: { value: 0.5 }
-        section: {value: 3.0}
+        angle: { value: 0.5 }
+        offset: { value: 0.5 }
+        uvRatio: { value: 0.5 }
         startColor: { 
           value: [1, 1, 1, 1],
           editor: { type: color, tooltip: "开始颜色" }
@@ -25,7 +27,6 @@ CCEffect %{
           value: [1, 1, 1, 1],
           editor: { type: color, tooltip: "结束颜色" }
         }
-
 }%
 
 CCProgram sprite-vs %{
@@ -81,8 +82,10 @@ CCProgram sprite-fs %{
       vec4 endColor;
   };
 
-  uniform Params {
-      float section;
+  uniform Adjust {
+      float angle;
+      float offset;
+      float uvRatio;
   };
 
   #if USE_TEXTURE
@@ -96,20 +99,26 @@ CCProgram sprite-fs %{
 
     #if USE_TEXTURE
       o *= CCSampleWithAlphaSeparated(cc_spriteTexture, uv0);
+      // #if IS_GRAY
+      //   float gray  = 0.2126 * o.r + 0.7152 * o.g + 0.0722 * o.b;
+      //   o.r = o.g = o.b = gray;
+      // #endif
+      float angleInRadians = radians(angle); 
+      float ratio = clamp((uv0.y * cos(angleInRadians) + uv0.x * sin(angleInRadians) + offset) * uvRatio, 0.0, 1.0);
+      float startRatio = 1.0 - ratio;
+      float endRatio = ratio;
     #endif
 
     #if USE_VERTICAL
-      if(section <= 1.0){
-        o.rgb *= mix(startColor, endColor, vec4(uv0.y)).rgb;
-      }else{
-        float avg = 1.0 / section;
-        float uvy = mod(uv0.y, avg) / avg;
-        o.rgb *= mix(startColor, endColor, vec4(uvy)).rgb;
-      }
+      o.r *= startColor.r * startRatio + endColor.r * endRatio;
+      o.g *= startColor.g * startRatio + endColor.g * endRatio;
+  		o.b *= startColor.b * startRatio + endColor.b * endRatio;
     #endif
 
     #if USE_HORIZONTAL
-      o.rgb *= mix(startColor, endColor, vec4(uv0.x)).rgb;
+      o.r *= startColor.r * startRatio + endColor.r * endRatio;
+      o.g *= startColor.g * startRatio + endColor.g * endRatio;
+  		o.b *= startColor.b * startRatio + endColor.b * endRatio;
     #endif
 
     o *= color;
