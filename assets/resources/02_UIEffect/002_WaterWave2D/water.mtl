@@ -9,7 +9,9 @@
   },
   "_techIdx": 0,
   "_defines": [
-    {}
+    {
+      "USE_TEXTURE": true
+    }
   ],
   "_states": [
     {
@@ -24,6 +26,18 @@
   ],
   "_props": [
     {
+      "alphaThreshold": 1,
+      "endColor": {
+        "__type__": "cc.Color",
+        "r": 71,
+        "g": 6,
+        "b": 6,
+        "a": 255
+      },
+      "mainTexture": {
+        "__uuid__": "a4af6a3e-6e92-4dd1-a507-a1e56eea99a6@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
       "noiseTexture": {
         "__uuid__": "16c2ef2b-615e-4d6d-bc5e-bc3686d58f9f@6c48a",
         "__expectedType__": "cc.Texture2D"

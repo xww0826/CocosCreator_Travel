@@ -30,12 +30,46 @@
         ".json"
       ],
       "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "64149608-896b-4c53-9a4f-98ea7e8884fa@f9941",
+      "displayName": "Sea_Back",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 190.5,
+        "trimX": 0,
+        "trimY": 16,
+        "width": 1536,
+        "height": 797,
+        "rawWidth": 1536,
+        "rawHeight": 1210,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "64149608-896b-4c53-9a4f-98ea7e8884fa@6c48a",
+        "atlasUuid": ""
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
     }
   },
   "userData": {
     "hasAlpha": true,
-    "type": "texture",
-    "redirect": "64149608-896b-4c53-9a4f-98ea7e8884fa@6c48a",
+    "type": "sprite-frame",
+    "redirect": "64149608-896b-4c53-9a4f-98ea7e8884fa@f9941",
     "fixAlphaTransparencyArtifacts": false
   }
 }
