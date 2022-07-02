@@ -1,0 +1,55 @@
+// Effect Syntax Guide: https://docs.cocos.com/creator/manual/zh/shader/index.html
+
+CCEffect %{
+  techniques:
+  - name: opaque
+    passes:
+    - vert: general-vs:vert # builtin header
+      frag: unlit-fs:frag
+      properties: &props
+        mainTexture:    { value: white }
+        mainColor:      { value: [1, 1, 1, 1], editor: { type: color } }
+  - name: transparent
+    passes:
+    - vert: general-vs:vert # builtin header
+      frag: unlit-fs:frag
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendSrcAlpha: src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      properties: *props
+}%
+
+CCProgram unlit-fs %{
+  precision highp float;
+  #include <output>
+  #include <cc-fog-fs>
+
+  in vec2 v_uv;
+  in vec3 v_position;
+
+  uniform sampler2D mainTexture;
+
+  uniform Constant {
+    vec4 mainColor;
+  };
+
+  vec4 frag () {
+    // r g b 颜色分量值
+    vec3 color = vec3(0., 1.0, 0.);
+    // 定义一个 x=0.5 y=0 的向量
+    vec2 center = vec2(0.5, 1.);
+    // 计算 uv 中的点与 center 点间的距离（计算两点间距离）
+    float dis = distance(v_uv, center);
+    // step 函数解释：p1 > p2 return 0 else 1 
+    float res = step(dis, 0.5);
+    // 颜色混合
+    color *= res;
+    // a 通用不影响
+    vec4 col = vec4(color, 1.);
+    return CCFragOutput(col);
+  }
+}%
