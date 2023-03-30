@@ -6,5 +6,11 @@
       "fitWidth": true
     }
   },
-  "__version__": "1.0.2"
+  "__version__": "1.0.2",
+  "layer": [
+    {
+      "name": "UI_Capture",
+      "value": 65536
+    }
+  ]
 }
