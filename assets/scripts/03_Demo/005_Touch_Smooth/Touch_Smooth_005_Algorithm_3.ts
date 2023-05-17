@@ -1,4 +1,4 @@
-import { _decorator, Component, EventTouch, Node, Sprite, SpriteFrame, Texture2D, UITransform, v2, v3, Vec2, Vec3 } from 'cc';
+import { _decorator, Component, EventTouch, Node, Sprite, SpriteFrame, Texture2D, Vec2 } from 'cc';
 import { CaptureUtils } from '../../Commons/CaptureUtils';
 const { ccclass, property } = _decorator;
 
@@ -165,17 +165,6 @@ export class Touch_Smooth_005_Algorithm_3 extends Component {
         if (radius == 0) return;
         //三角形的斜边的平方
         let dis = radius * radius;
-        // let minX = this._minX(x - radius);
-        // let maxX = this._maxX(x + radius);
-        // for (let i = minX; i <= maxX; ++i) {
-        //     let r = x - i;
-        //     r = Math.round(Math.sqrt(dis - r * r));
-        //     let minY = this._minY(y - r);
-        //     let maxY = this._maxY(y + r);
-        //     for (let j = minY; j <= maxY; ++j) {
-        //         this._drawPixel(i, j);
-        //     }
-        // }
         let minY = this.clampY(y - radius);
         let maxY = this.clampY(y + radius);
         for (let j = minY; j <= maxY; ++j) {
@@ -266,11 +255,6 @@ export class Touch_Smooth_005_Algorithm_3 extends Component {
         let maxX = this.clampX(p.x + w);
         let minY = this.clampY(p.y);
         let maxY = this.clampY(p.y + h);
-        // for (let x = minX; x <= maxX; ++x) {
-        //     for (let y = minY; y <= maxY; ++y) {
-        //         this._drawPixel(x, y);
-        //     }
-        // }
         for (let y = minY; y <= maxY; ++y) {
             this._drawRowPixel(minX, maxX, y);
         }
@@ -285,8 +269,6 @@ export class Touch_Smooth_005_Algorithm_3 extends Component {
     private _drawColPixel(startY: number, endY: number, x: number) {
         let index = (startY * this.width + x) * 4;
         for (let y = startY; y <= endY; ++y) {
-
-            // console.log("=========x = " + x + " y = " + y);
             let key = `${x}_${y}`;
             let idx = this.wipePoints.get(key);
             if (idx) {
@@ -306,8 +288,6 @@ export class Touch_Smooth_005_Algorithm_3 extends Component {
     private _drawRowPixel(startX: number, endX: number, y: number) {
         let index = (y * this.width + startX) * 4;
         for (let x = startX; x <= endX; ++x) {
-            // console.log("=========x = " + x + " y = " + y);
-
             let key = `${x}_${y}`;
             let idx = this.wipePoints.get(key);
             if (idx) {
@@ -316,7 +296,6 @@ export class Touch_Smooth_005_Algorithm_3 extends Component {
             }
             index += 4;
         }
-
     }
 
     /**
@@ -341,9 +320,6 @@ export class Touch_Smooth_005_Algorithm_3 extends Component {
             let maxY = this.clampY(Math.round(p1.y + (x - p1.x) * k1));
             let minY = this.clampY(Math.round(p2.y + (x - p2.x) * k2));
             this._drawColPixel(minY, maxY, x);
-            // for (let y = minY; y <= maxY; ++y) {
-            //     this._drawPixel(x, y);
-            // }
         }
     }
 
@@ -400,9 +376,6 @@ export class Touch_Smooth_005_Algorithm_3 extends Component {
             minY = this._minY(minY);
             maxY = this._maxY(maxY);
             this._drawColPixel(minY, maxY, x);
-            // for (let y = minY; y <= maxY; ++y) {
-            //     this._drawPixel(x, y);
-            // }
         }
     }
 
