@@ -8,36 +8,40 @@ import { Base64Utils } from "./Base64Utils";
 export class CaptureUtils {
 
 
-    public static captureNode(component: Component, node: Node) {
-        // 创建可视区域大小的纹理
-        let size = view.getVisibleSize();
-        let textureWidth = Math.round(size.width);
-        let textureHeight = Math.round(size.height);
-        let renderTexture = new RenderTexture();
-        renderTexture.reset({ width: textureWidth, height: textureHeight });
-        // 将 Node 转到世界坐标
-        let uiTransform = node.getComponent(UITransform);
-        let worldPos = uiTransform.convertToWorldSpaceAR(Vec3.ZERO);
-        // 计算 Node 的实际宽、高
-        let width = Math.round(uiTransform.width * node.getScale().x);
-        let height = Math.round(uiTransform.height * node.getScale().y);
-        // 计算 Node 的左下角世界坐标
-        let x = Math.round(worldPos.x - width * uiTransform.anchorX);
-        let y = Math.round(worldPos.y - height * uiTransform.anchorY);
-        // 创建相机并在下一帧进行渲染
-        let camera = find('Canvas/CaptureCamera').getComponent(Camera);
-        camera.orthoHeight = Math.round(textureHeight / 2);
-        camera.targetTexture = renderTexture;
-        // camera.clearColor = new Color(255, 255, 255, 0);
-        // camera.clearFlags = gfx.ClearFlagBit.COLOR;
-        // camera.clearDepth = 0;
-        component.scheduleOnce(() => {
-            // 将纹理转为像素点
-            let pixels = renderTexture.readPixels(x, y, width, height);
-            if (!JSB) {
-                let base64 = Base64Utils.pixels2Base64(pixels, width, height, false);
-                console.log(base64);
-            }
+    public static async captureNode(component: Component, node: Node) {
+        return new Promise<{ pixels: Uint8Array, width: number, height: number }>(r => {
+            // 创建可视区域大小的纹理
+            let size = view.getVisibleSize();
+            let textureWidth = Math.round(size.width);
+            let textureHeight = Math.round(size.height);
+            let renderTexture = new RenderTexture();
+            renderTexture.reset({ width: textureWidth, height: textureHeight });
+            // 将 Node 转到世界坐标
+            let uiTransform = node.getComponent(UITransform);
+            let worldPos = uiTransform.convertToWorldSpaceAR(Vec3.ZERO);
+            // 计算 Node 的实际宽、高
+            let width = Math.round(uiTransform.width * node.getScale().x);
+            let height = Math.round(uiTransform.height * node.getScale().y);
+            // 计算 Node 的左下角世界坐标
+            let x = Math.round(worldPos.x - width * uiTransform.anchorX);
+            let y = Math.round(worldPos.y - height * uiTransform.anchorY);
+            // 创建相机并在下一帧进行渲染
+            let camera = find('Canvas/CaptureCamera').getComponent(Camera);
+            camera.orthoHeight = Math.round(textureHeight / 2);
+            camera.targetTexture = renderTexture;
+            // camera.clearColor = new Color(255, 255, 255, 0);
+            // camera.clearFlags = gfx.ClearFlagBit.COLOR;
+            // camera.clearDepth = 0;
+            component.scheduleOnce(() => {
+                // 将纹理转为像素点
+                let pixels = renderTexture.readPixels(x, y, width, height);
+                if (!JSB) {
+                    let base64 = Base64Utils.pixels2Base64(pixels, width, height, false);
+                    console.log(base64);
+                }
+                this.flipPixels(pixels, width, height);
+                r({ pixels: pixels, width: width, height: height });
+            });
         });
     }
 
@@ -78,7 +82,7 @@ export class CaptureUtils {
         }, 1);
     }
 
-    static showCapture(sprite: Sprite, pixels: Uint8Array, width: number, height: number) {
+    public static showCapture(sprite: Sprite, pixels: Uint8Array, width: number, height: number) {
         let imageAsset: ImageAsset = new ImageAsset();
         imageAsset.reset({
             _data: pixels,
@@ -97,4 +101,19 @@ export class CaptureUtils {
         sprite.spriteFrame = spriteFrame;
     }
 
+    public static flipPixels(pixels: Uint8Array, width, height) {
+        let len = Math.floor(height / 2);
+        let rowBytes = width * 4;
+        for (let row = 0; row < len; row++) {
+            let srow = height - 1 - row;
+            let reStart = row * width * 4;
+            let reEnd = srow * width * 4;
+            // save the piexls data
+            for (let i = 0; i < rowBytes; i++) {
+                let temp = pixels[reStart + i];
+                pixels[reStart + i] = pixels[reEnd + i];
+                pixels[reEnd + i] = temp;
+            }
+        }
+    }
 }
