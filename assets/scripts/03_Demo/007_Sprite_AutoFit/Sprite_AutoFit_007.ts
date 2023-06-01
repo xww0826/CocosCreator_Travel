@@ -23,8 +23,8 @@ export class Sprite_AutoFit_007 extends Component {
     private height: number = 300;
 
     /** 目标图片的宽、高，要与 spriteAssets 资源对应 */
-    private imgWidth: number[] = [800, 1000, 6000];
-    private imgHeight: number[] = [572, 1418, 2000];
+    private imgWidth: number[] = [800, 1000, 6000, 235, 514];
+    private imgHeight: number[] = [572, 1418, 2000, 332, 105];
 
     protected start(): void {
         this.refresh();
