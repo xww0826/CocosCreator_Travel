@@ -10,7 +10,7 @@
   },
   {
     "__type__": "cc.Scene",
-    "_name": "Mask_006",
+    "_name": "Mask_006_Component",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
