@@ -99,9 +99,6 @@ CCProgram sprite-fs %{
   vec4 frag () {
     vec4 o = vec4(1, 1, 1, 1);
     o *= CCSampleWithAlphaSeparated(cc_spriteTexture, v_uv0);
-    o *= v_color;
-
-    ALPHA_TEST(o);
 
     // 像素点距离纹理坐标原点的长度超过圆的半径时，设置像素透明度为 0，需要依赖透明度混合，所以必须开启 blendState
     float rx = center.x * wh_ratio;
@@ -117,8 +114,9 @@ CCProgram sprite-fs %{
     当 x = min 时返回 0，当 x = max 时返回 1。当 x = min 与 max 之间的数，则返回 0 ~ 1 之间的平滑插值
     在这里使用它可以优化边缘像素锯齿
     */
+    o *= v_color;
     o.a = smoothstep(radius, radius - blur, dis) * o.a;
-
+    ALPHA_TEST(o);
     return o;
   }
 }%
