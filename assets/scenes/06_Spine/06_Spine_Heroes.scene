@@ -23,7 +23,7 @@
     "_prefab": null,
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 68
+      "__id__": 71
     },
     "_id": "25e57c04-f539-4e00-81c0-d1b0fbef735a"
   },
@@ -97,18 +97,21 @@
       },
       {
         "__id__": 62
+      },
+      {
+        "__id__": 65
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 65
+        "__id__": 68
       },
       {
-        "__id__": 66
+        "__id__": 69
       },
       {
-        "__id__": 67
+        "__id__": 70
       }
     ],
     "_prefab": null,
@@ -324,8 +327,8 @@
       "__expectedType__": "sp.SkeletonData"
     },
     "_premultipliedAlpha": true,
-    "defaultSkin": "",
-    "defaultAnimation": "",
+    "defaultSkin": "Assassin",
+    "defaultAnimation": "block",
     "_sockets": [],
     "_debugMesh": false,
     "_id": "60iiarOZpECoi398dlkice"
@@ -430,8 +433,8 @@
       "__expectedType__": "sp.SkeletonData"
     },
     "_premultipliedAlpha": true,
-    "defaultSkin": "",
-    "defaultAnimation": "",
+    "defaultSkin": "Beardy",
+    "defaultAnimation": "crouchIdle",
     "_sockets": [],
     "_debugMesh": false,
     "_id": "67mGf8yvFBlJp8hKagGP40"
@@ -536,8 +539,8 @@
       "__expectedType__": "sp.SkeletonData"
     },
     "_premultipliedAlpha": true,
-    "defaultSkin": "",
-    "defaultAnimation": "",
+    "defaultSkin": "Buck",
+    "defaultAnimation": "crouchWalk",
     "_sockets": [],
     "_debugMesh": false,
     "_id": "7auDRh8PxJRIknX0IWm/wi"
@@ -642,8 +645,8 @@
       "__expectedType__": "sp.SkeletonData"
     },
     "_premultipliedAlpha": true,
-    "defaultSkin": "",
-    "defaultAnimation": "",
+    "defaultSkin": "Chuck",
+    "defaultAnimation": "floorGetUp",
     "_sockets": [],
     "_debugMesh": false,
     "_id": "76XIL/k2pO1rm4/wQstUcq"
@@ -748,8 +751,8 @@
       "__expectedType__": "sp.SkeletonData"
     },
     "_premultipliedAlpha": true,
-    "defaultSkin": "",
-    "defaultAnimation": "",
+    "defaultSkin": "Commander",
+    "defaultAnimation": "floorIdle",
     "_sockets": [],
     "_debugMesh": false,
     "_id": "8br3daZVJO0Yenw7uMgWOD"
@@ -854,8 +857,8 @@
       "__expectedType__": "sp.SkeletonData"
     },
     "_premultipliedAlpha": true,
-    "defaultSkin": "",
-    "defaultAnimation": "",
+    "defaultSkin": "Ducky",
+    "defaultAnimation": "hideSword",
     "_sockets": [],
     "_debugMesh": false,
     "_id": "a04+GUjxRFy5SZPGjoPUty"
@@ -960,8 +963,8 @@
       "__expectedType__": "sp.SkeletonData"
     },
     "_premultipliedAlpha": true,
-    "defaultSkin": "",
-    "defaultAnimation": "",
+    "defaultSkin": "Dummy",
+    "defaultAnimation": "hitBig",
     "_sockets": [],
     "_debugMesh": false,
     "_id": "eex/oLDHJNVaSnYIaqKXeU"
@@ -1066,8 +1069,8 @@
       "__expectedType__": "sp.SkeletonData"
     },
     "_premultipliedAlpha": true,
-    "defaultSkin": "",
-    "defaultAnimation": "",
+    "defaultSkin": "Fletch",
+    "defaultAnimation": "idle",
     "_sockets": [],
     "_debugMesh": false,
     "_id": "0dG+ZWpBRBV7BjX+yhnx9Y"
@@ -1172,8 +1175,8 @@
       "__expectedType__": "sp.SkeletonData"
     },
     "_premultipliedAlpha": true,
-    "defaultSkin": "",
-    "defaultAnimation": "",
+    "defaultSkin": "Gabriel",
+    "defaultAnimation": "idleTired",
     "_sockets": [],
     "_debugMesh": false,
     "_id": "de/unMc0xJZ73jYzs6NLun"
@@ -1278,8 +1281,8 @@
       "__expectedType__": "sp.SkeletonData"
     },
     "_premultipliedAlpha": true,
-    "defaultSkin": "",
-    "defaultAnimation": "",
+    "defaultSkin": "MetalMan",
+    "defaultAnimation": "jump",
     "_sockets": [],
     "_debugMesh": false,
     "_id": "a9nDDmx+VJiq2l7lJWprNj"
@@ -1384,8 +1387,8 @@
       "__expectedType__": "sp.SkeletonData"
     },
     "_premultipliedAlpha": true,
-    "defaultSkin": "",
-    "defaultAnimation": "",
+    "defaultSkin": "Pamela-1",
+    "defaultAnimation": "meleeSwing1",
     "_sockets": [],
     "_debugMesh": false,
     "_id": "ffcxFs399GxLBrK8Pc2mqI"
@@ -1490,8 +1493,8 @@
       "__expectedType__": "sp.SkeletonData"
     },
     "_premultipliedAlpha": true,
-    "defaultSkin": "default",
-    "defaultAnimation": "",
+    "defaultSkin": "Pamela-2",
+    "defaultAnimation": "meleeSwing2",
     "_sockets": [],
     "_debugMesh": false,
     "_id": "49g+ydmblIzYQ92c2Shxqy"
@@ -1596,8 +1599,8 @@
       "__expectedType__": "sp.SkeletonData"
     },
     "_premultipliedAlpha": true,
-    "defaultSkin": "",
-    "defaultAnimation": "",
+    "defaultSkin": "Pamela-3",
+    "defaultAnimation": "meleeSwing1-fullBody",
     "_sockets": [],
     "_debugMesh": false,
     "_id": "e0gs8DGJpN47VVSoXxbZN4"
@@ -1702,8 +1705,8 @@
       "__expectedType__": "sp.SkeletonData"
     },
     "_premultipliedAlpha": true,
-    "defaultSkin": "",
-    "defaultAnimation": "",
+    "defaultSkin": "Pamela-4",
+    "defaultAnimation": "meleeSwing2-fullBody",
     "_sockets": [],
     "_debugMesh": false,
     "_id": "37RxvklfVDVI6OiIfOcWt5"
@@ -1808,8 +1811,8 @@
       "__expectedType__": "sp.SkeletonData"
     },
     "_premultipliedAlpha": true,
-    "defaultSkin": "",
-    "defaultAnimation": "",
+    "defaultSkin": "Pamela-5",
+    "defaultAnimation": "punch1",
     "_sockets": [],
     "_debugMesh": false,
     "_id": "68PSY/PPxDvp2CrErr487j"
@@ -1914,8 +1917,8 @@
       "__expectedType__": "sp.SkeletonData"
     },
     "_premultipliedAlpha": true,
-    "defaultSkin": "",
-    "defaultAnimation": "",
+    "defaultSkin": "Stumpy",
+    "defaultAnimation": "punch2",
     "_sockets": [],
     "_debugMesh": false,
     "_id": "a5np4SVWNCabXnZHKGwB9Q"
@@ -2020,8 +2023,8 @@
       "__expectedType__": "sp.SkeletonData"
     },
     "_premultipliedAlpha": true,
-    "defaultSkin": "",
-    "defaultAnimation": "",
+    "defaultSkin": "Truck",
+    "defaultAnimation": "roll",
     "_sockets": [],
     "_debugMesh": false,
     "_id": "260iOq/v5MyZ3x3ZNH3a5p"
@@ -2126,8 +2129,8 @@
       "__expectedType__": "sp.SkeletonData"
     },
     "_premultipliedAlpha": true,
-    "defaultSkin": "",
-    "defaultAnimation": "",
+    "defaultSkin": "Young",
+    "defaultAnimation": "run",
     "_sockets": [],
     "_debugMesh": false,
     "_id": "11iYbjgRlGebw5hJsXB6Cv"
@@ -2232,8 +2235,8 @@
       "__expectedType__": "sp.SkeletonData"
     },
     "_premultipliedAlpha": true,
-    "defaultSkin": "",
-    "defaultAnimation": "",
+    "defaultSkin": "Young",
+    "defaultAnimation": "run2",
     "_sockets": [],
     "_debugMesh": false,
     "_id": "2cZeGHSFRDVZiGVzEgjHjO"
@@ -2338,11 +2341,117 @@
       "__expectedType__": "sp.SkeletonData"
     },
     "_premultipliedAlpha": true,
-    "defaultSkin": "",
-    "defaultAnimation": "",
+    "defaultSkin": "Young",
+    "defaultAnimation": "walk",
     "_sockets": [],
     "_debugMesh": false,
     "_id": "felg0OIDBLNpl53MwBRM3a"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "heroes-020",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 2
+    },
+    "_children": [],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 66
+      },
+      {
+        "__id__": 67
+      }
+    ],
+    "_prefab": null,
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": 224.769,
+      "y": -591.382,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 0.2,
+      "y": 0.2,
+      "z": 1
+    },
+    "_layer": 33554432,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": "9fEFgo4jNCt7w6uPExWRFL"
+  },
+  {
+    "__type__": "cc.UITransform",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 65
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 620.96,
+      "height": 1043.9
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_id": "361Rd/eMxIgYLDPtDVmUgl"
+  },
+  {
+    "__type__": "sp.Skeleton",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 65
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_visFlags": 0,
+    "_customMaterial": null,
+    "_srcBlendFactor": 2,
+    "_dstBlendFactor": 4,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "loop": true,
+    "_timeScale": 1,
+    "_useTint": false,
+    "_preCacheMode": 0,
+    "_cacheMode": 0,
+    "_defaultCacheMode": 0,
+    "_debugBones": false,
+    "_debugSlots": false,
+    "_skeletonData": {
+      "__uuid__": "763bad2c-7c8e-44d5-928e-c21d19fd2e32",
+      "__expectedType__": "sp.SkeletonData"
+    },
+    "_premultipliedAlpha": true,
+    "defaultSkin": "Young",
+    "defaultAnimation": "walk2",
+    "_sockets": [],
+    "_debugMesh": false,
+    "_id": "3egTh/2YtK+bdi6WpUFtj2"
   },
   {
     "__type__": "cc.UITransform",
@@ -2412,19 +2521,19 @@
   {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 69
-    },
-    "shadows": {
-      "__id__": 70
-    },
-    "_skybox": {
-      "__id__": 71
-    },
-    "fog": {
       "__id__": 72
     },
-    "octree": {
+    "shadows": {
       "__id__": 73
+    },
+    "_skybox": {
+      "__id__": 74
+    },
+    "fog": {
+      "__id__": 75
+    },
+    "octree": {
+      "__id__": 76
     }
   },
   {
