@@ -1,0 +1,75 @@
+{
+  "ver": "1.0.23",
+  "importer": "image",
+  "imported": true,
+  "uuid": "04395a3c-d065-44fe-95c2-fe93ca7fc6cd",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "04395a3c-d065-44fe-95c2-fe93ca7fc6cd@6c48a",
+      "displayName": "progress_bar",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "imageUuidOrDatabaseUri": "04395a3c-d065-44fe-95c2-fe93ca7fc6cd",
+        "isUuid": true,
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "04395a3c-d065-44fe-95c2-fe93ca7fc6cd@f9941",
+      "displayName": "progress_bar",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": -0.5,
+        "offsetY": 0.5,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 727,
+        "height": 199,
+        "rawWidth": 728,
+        "rawHeight": 200,
+        "borderTop": 83,
+        "borderBottom": 80,
+        "borderLeft": 132,
+        "borderRight": 110,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "04395a3c-d065-44fe-95c2-fe93ca7fc6cd@6c48a",
+        "atlasUuid": ""
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "fixAlphaTransparencyArtifacts": true,
+    "hasAlpha": true,
+    "redirect": "04395a3c-d065-44fe-95c2-fe93ca7fc6cd@f9941"
+  }
+}
