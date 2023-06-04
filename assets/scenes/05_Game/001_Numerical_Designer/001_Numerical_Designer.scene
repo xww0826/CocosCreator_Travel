@@ -10,7 +10,7 @@
   },
   {
     "__type__": "cc.Scene",
-    "_name": "001_Damage_Calculation",
+    "_name": "001_Numerical_Designer",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -23,14 +23,14 @@
     "_prefab": null,
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 8
+      "__id__": 9
     },
     "_id": "5f1ecd49-09d5-42fc-b757-e83e14dd8a09"
   },
   {
     "__type__": "cc.Node",
     "_name": "Canvas",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 1
     },
@@ -49,6 +49,9 @@
       },
       {
         "__id__": 7
+      },
+      {
+        "__id__": 8
       }
     ],
     "_prefab": null,
@@ -83,7 +86,7 @@
   {
     "__type__": "cc.Node",
     "_name": "Camera",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 2
     },
@@ -230,21 +233,32 @@
     "_id": "c5V1EV8IpMtrIvY1OE9t2u"
   },
   {
+    "__type__": "30208Dko/dPcp+U0zz5giLj",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_id": "eagItzlNRKyJ8QEC1u0MA5"
+  },
+  {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 9
-    },
-    "shadows": {
       "__id__": 10
     },
-    "_skybox": {
+    "shadows": {
       "__id__": 11
     },
-    "fog": {
+    "_skybox": {
       "__id__": 12
     },
-    "octree": {
+    "fog": {
       "__id__": 13
+    },
+    "octree": {
+      "__id__": 14
     }
   },
   {
