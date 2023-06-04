@@ -10,7 +10,7 @@
   },
   {
     "__type__": "cc.Scene",
-    "_name": "Mask_007",
+    "_name": "Mask_006",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -371,7 +371,7 @@
       "__uuid__": "f975f6a8-0f1a-4607-b80b-6d76d79797dd@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
-    "_alphaThreshold": 0.1,
+    "_alphaThreshold": 0.45,
     "_id": "88b6aTSTdKo6Kvim8hDIZh"
   },
   {
