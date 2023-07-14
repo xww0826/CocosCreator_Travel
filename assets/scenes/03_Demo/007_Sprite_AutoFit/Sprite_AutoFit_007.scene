@@ -1774,6 +1774,10 @@
       {
         "__uuid__": "9f498cb8-98e0-4030-963b-aa6f49bd32e8@f9941",
         "__expectedType__": "cc.SpriteFrame"
+      },
+      {
+        "__uuid__": "393d21d6-f1cf-4722-9ec6-28a6ca60e91b@f9941",
+        "__expectedType__": "cc.SpriteFrame"
       }
     ],
     "fitXYSprite": {
