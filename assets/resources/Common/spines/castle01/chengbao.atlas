@@ -1,0 +1,180 @@
+
+chengbao.png
+size: 3936,4096
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+guang
+  rotate: false
+  xy: 79, 2
+  size: 75, 77
+  orig: 75, 77
+  offset: 0, 0
+  index: -1
+guang2
+  rotate: false
+  xy: 2, 2
+  size: 75, 77
+  orig: 75, 77
+  offset: 0, 0
+  index: -1
+yanhua1/yanhua1 (1)
+  rotate: false
+  xy: 2, 1377
+  size: 975, 915
+  orig: 975, 915
+  offset: 0, 0
+  index: -1
+yanhua1/yanhua1 (10)
+  rotate: false
+  xy: 1304, 3179
+  size: 975, 915
+  orig: 975, 915
+  offset: 0, 0
+  index: -1
+yanhua1/yanhua1 (11)
+  rotate: false
+  xy: 2, 460
+  size: 975, 915
+  orig: 975, 915
+  offset: 0, 0
+  index: -1
+yanhua1/yanhua1 (12)
+  rotate: false
+  xy: 2281, 3179
+  size: 975, 915
+  orig: 975, 915
+  offset: 0, 0
+  index: -1
+yanhua1/yanhua1 (13)
+  rotate: false
+  xy: 1304, 2262
+  size: 975, 915
+  orig: 975, 915
+  offset: 0, 0
+  index: -1
+yanhua1/yanhua1 (2)
+  rotate: false
+  xy: 2281, 2262
+  size: 975, 915
+  orig: 975, 915
+  offset: 0, 0
+  index: -1
+yanhua1/yanhua1 (3)
+  rotate: false
+  xy: 979, 1345
+  size: 975, 915
+  orig: 975, 915
+  offset: 0, 0
+  index: -1
+yanhua1/yanhua1 (4)
+  rotate: false
+  xy: 1956, 1345
+  size: 975, 915
+  orig: 975, 915
+  offset: 0, 0
+  index: -1
+yanhua1/yanhua1 (5)
+  rotate: false
+  xy: 979, 428
+  size: 975, 915
+  orig: 975, 915
+  offset: 0, 0
+  index: -1
+yanhua1/yanhua1 (6)
+  rotate: false
+  xy: 1956, 428
+  size: 975, 915
+  orig: 975, 915
+  offset: 0, 0
+  index: -1
+yanhua1/yanhua1 (7)
+  rotate: false
+  xy: 2933, 43
+  size: 975, 915
+  orig: 975, 915
+  offset: 0, 0
+  index: -1
+云彩城堡01
+  rotate: false
+  xy: 2, 2294
+  size: 1300, 1800
+  orig: 1300, 1800
+  offset: 0, 0
+  index: -1
+云彩城堡021
+  rotate: true
+  xy: 2, 236
+  size: 222, 506
+  orig: 222, 506
+  offset: 0, 0
+  index: -1
+云彩城堡022
+  rotate: true
+  xy: 2, 81
+  size: 153, 506
+  orig: 153, 506
+  offset: 0, 0
+  index: -1
+云彩城堡023
+  rotate: false
+  xy: 3442, 2286
+  size: 153, 506
+  orig: 153, 506
+  offset: 0, 0
+  index: -1
+云彩城堡024
+  rotate: false
+  xy: 3752, 3080
+  size: 153, 506
+  orig: 153, 506
+  offset: 0, 0
+  index: -1
+云彩城堡025
+  rotate: false
+  xy: 3258, 2286
+  size: 182, 506
+  orig: 182, 506
+  offset: 0, 0
+  index: -1
+云彩城堡026
+  rotate: false
+  xy: 3752, 3588
+  size: 182, 506
+  orig: 182, 506
+  offset: 0, 0
+  index: -1
+云彩城堡03
+  rotate: true
+  xy: 2933, 960
+  size: 1300, 438
+  orig: 1300, 438
+  offset: 0, 0
+  index: -1
+云彩城堡04
+  rotate: true
+  xy: 3258, 2794
+  size: 1300, 492
+  orig: 1300, 492
+  offset: 0, 0
+  index: -1
+
+chengbao2.png
+size: 1956,919
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+yanhua1/yanhua1 (8)
+  rotate: false
+  xy: 2, 2
+  size: 975, 915
+  orig: 975, 915
+  offset: 0, 0
+  index: -1
+yanhua1/yanhua1 (9)
+  rotate: false
+  xy: 979, 2
+  size: 975, 915
+  orig: 975, 915
+  offset: 0, 0
+  index: -1
